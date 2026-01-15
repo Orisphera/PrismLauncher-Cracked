@@ -53,12 +53,22 @@ jobs:
           #   cmake-preset: linux
           #   qt-version: 6.11.2
 
-          # - os: windows-2022
-          #   artifact-name: Windows-MinGW-w64
+          - os: windows-2022
+            artifact-name: Windows-MinGW-w64
+            cmake-preset: windows_mingw
+            msystem: CLANG64
+            vcvars-arch: amd64_x86
+
+          # - os: windows-11-arm
+          #   artifact-name: Windows-MinGW-arm64
           #   cmake-preset: windows_mingw
+
           #   msystem: CLANG64
           #   vcvars-arch: amd64_x86
           #   qt-version: 6.11.2
+
+          #   msystem: CLANGARM64
+          #   vcvars-arch: arm64
 
           # - os: windows-2022
           #   artifact-name: Windows-MSVC
